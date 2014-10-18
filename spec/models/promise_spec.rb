@@ -7,6 +7,7 @@ RSpec.describe Promise, :type => :model do
     expect(promise.errors_on(:description)).not_to be_empty
     expect(promise.errors_on(:candidate_id)).not_to be_empty
     expect(promise.errors_on(:category_id)).not_to be_empty
+    expect(promise.errors_on(:date)).not_to be_empty
   end
 
   it "should require a valid status" do
