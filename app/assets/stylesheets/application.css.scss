@@ -37,7 +37,7 @@ body {
 *  Header
 *********************************************************************/
 .header {
-	height: 91px;
+	height: $header-height;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -62,7 +62,7 @@ body {
 			display: inline-block;
 
 			a {
-				line-height: 91px;
+				line-height: $header-height;
 				padding: 0 40px;
 				font-size: 18px;
 				color: $color-dark;
@@ -100,11 +100,11 @@ body {
 *********************************************************************/
 
 .main-content {
-
+	margin-top: $header-height;
 }
 
 .featured-content-home {
-	margin-top: 91px;
+	margin-top: $header-height;
 	background: #245064 url(image_path('featured-home-bg.jpg')) center no-repeat;
 	height: 300px;
 	text-align: center;
