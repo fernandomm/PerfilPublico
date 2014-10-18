@@ -26,7 +26,7 @@ en:
     contact: Contact
   main:
     index:
-      heading_html: "Monitor Brazilian <br>candidates promises"
+      heading_html: "Follow promises <br> of Brazilian candidates"
       select_state: Select a state
   candidates:
     show:
