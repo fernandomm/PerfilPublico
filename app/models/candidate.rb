@@ -1,5 +1,5 @@
 class Candidate < ActiveRecord::Base
-  belongs_to :party
+  belongs_to :political_party
   has_many :promises
 
   validates_presence_of :name, :biography, :age
