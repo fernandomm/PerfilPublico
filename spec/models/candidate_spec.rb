@@ -7,4 +7,12 @@ RSpec.describe Candidate, :type => :model do
     expect(candidate.errors_on(:biography)).not_to be_empty
     expect(candidate.errors_on(:age)).not_to be_empty
   end
+
+  it "should require a valid status" do
+    candidate = Candidate.new :political_office => 'not valid'
+    expect(candidate.errors_on(:political_office)).not_to be_empty
+
+    candidate.political_office = 'senator'
+    expect(candidate.errors_on(:political_office)).to be_empty
+  end
 end
