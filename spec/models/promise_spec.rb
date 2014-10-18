@@ -9,7 +9,7 @@ RSpec.describe Promise, :type => :model do
     expect(promise.errors_on(:category_id)).not_to be_empty
   end
 
-  it "should required a valid status" do
+  it "should require a valid status" do
     promise = Promise.new :status => 'not valid'
     expect(promise.errors_on(:status)).not_to be_empty
 
