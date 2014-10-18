@@ -1,22 +1,7 @@
 Perfilpublico [ ![Codeship Status for railsrumble/r14-team-83](https://www.codeship.io/projects/3a2dc240-389f-0132-c37b-6a023c1e0863/status)](https://www.codeship.io/projects/42075) [![Stories in Ready](https://badge.waffle.io/railsrumble/r14-team-83.png?label=ready&title=Ready)](https://waffle.io/railsrumble/r14-team-83)
 ================
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
-
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
-
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
-
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn’t work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+PerfilPublico is a website that focus on giving an overall look about what politicians proposed and what they actually did when they got elected.
 
 Ruby on Rails
 -------------
@@ -31,20 +16,19 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 Getting Started
 ---------------
 
-Documentation and Support
--------------------------
+Simply run:
 
-Issues
--------------
+```
+bundle install
+```
 
-Similar Projects
-----------------
+And then start server:
 
-Contributing
-------------
+```
+rails s
+```
 
 Credits
 -------
 
-License
--------
+See [contributors](https://github.com/railsrumble/r14-team-83).
