@@ -1,5 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Category, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should require some fields" do
+    category = Category.new
+    expect(category.errors_on(:name)).not_to be_empty
+  end
 end
