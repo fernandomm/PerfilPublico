@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Perfilpublico" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "Perfil Público" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Perfilpublico" %>">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
@@ -24,10 +24,10 @@
             <nav class="menu-nav">
               <ul>
                 <li>
-                  <%= link_to "About", root_url , title: "About" %>
+                  <%= link_to t('menu.about'), root_url , title: t('menu.about') %>
                 </li>
                 <li>
-                  <%= link_to "Contact", root_url , title: "Contact"%>
+                  <%= link_to t('menu.contact'), root_url , title: t('menu.contact') %>
                 </li>
               </ul>
             </nav>

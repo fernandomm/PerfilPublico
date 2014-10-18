@@ -1,0 +1,8 @@
+pt-Br:
+  menu:
+    about: Sobre
+    contact: Contato
+  main:
+    index:
+      heading_html: "Monitore as promessas<br> dos candidatos no Brasil"
+      select_state: Selecione um estado
