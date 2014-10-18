@@ -15,6 +15,7 @@ $bg-color: #0D6D9D;
 
 	.img {
 		@extend .img-circle;
+		@extend .pull-right;
 		width: $photo-size;
 		height: $photo-size;
 		border: 5px solid $color-white;
