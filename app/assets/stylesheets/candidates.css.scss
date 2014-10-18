@@ -1,0 +1,50 @@
+// Place all the styles related to the candidates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "base/variables";
+@import "components/btn-green";
+
+.candidate-header {
+	$photo-size: 150px;
+	background-color: $color-blue;
+	color: $color-white;
+
+	h1 span {
+		@extend .text-uppercase;
+		font-weight: 100;
+		font-size: 20px;
+	}
+
+	.img {
+		@extend .img-circle;
+		@extend .pull-right;
+		width: $photo-size;
+		height: $photo-size;
+		border: 5px solid $color-white;
+		background-repeat: no-repeat;
+    background-position: center;
+		background-size: cover;
+	}
+	.add-candidate {
+		@extend .btn;
+		@extend .btn-green;
+	}
+}
+.candidate-proposals,
+.candidate-info {
+	margin-top: 20px;
+}
+
+.candidate-info {
+	font-size: 16px;
+	dl,
+	.bio {
+		margin: 0 auto;
+		max-width: 800px;
+	}
+	.bio {
+		margin-top: 20px;
+	}
+}

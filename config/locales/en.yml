@@ -28,5 +28,14 @@ en:
     index:
       heading_html: "Follow promises <br> of Brazilian candidates"
       select_state: Select a state
-
-
+  candidates:
+    show:
+      add-promise: Add Promise
+      promises:
+        most-voted: most voted promises
+        most-visualized: most visualized promises
+      info:
+        about:
+          title: About
+          name: Name
+          political_party: Political Party

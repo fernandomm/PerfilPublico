@@ -7,3 +7,9 @@ pt-Br:
     index:
       heading_html: "Monitore as promessas<br> dos candidatos no Brasil"
       select_state: Selecione um estado
+  candidates:
+    show:
+      add-promise: Cadastrar Promessa
+      promises:
+        most-voted: promessas mais votadas
+        most-visualized: promessas mais visualizadas

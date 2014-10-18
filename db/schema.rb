@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018200456) do
+ActiveRecord::Schema.define(version: 20141018200518) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 20141018200456) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.integer  "party_id"
+    t.integer  "political_party_id"
     t.string   "political_office"
   end
 
-  add_index "candidates", ["party_id"], name: "index_candidates_on_party_id", using: :btree
+  add_index "candidates", ["political_party_id"], name: "index_candidates_on_political_party_id", using: :btree
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 20141018200456) do
     t.integer  "category_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "up_votes"
-    t.integer  "down_votes"
+    t.integer  "up_votes",     default: 0
+    t.integer  "down_votes",   default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "visible"
