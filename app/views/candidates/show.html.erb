@@ -1,0 +1,61 @@
+<div class="row candidate-header">
+  <div class="col-md-2 col-md-offset-1">
+    <div class="img" style="background-image: url(<%= @candidate.image.url %>)">
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h1>
+      <%= @candidate.name %>
+      <br>
+      <span><%= @candidate.political_office %></span>
+    </h1>
+  </div>
+  <div class="col-md-5">
+    <%= link_to t('.add-promise'), root_url , title: t('.add-promise'),
+      class: 'add-candidate' %>
+  </div>
+</div>
+<div class="row candidate-info">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-lemon">
+      <div class="panel-heading text-uppercase">
+        <%= t('.info.about.title') %>
+      </div>
+      <div class="panel-body">
+        <dl class="dl-horizontal">
+          <dt><%= t('.info.about.name') %>:</dt>
+          <dd><%= @candidate.name %></dd>
+          <dt><%= t('.info.about.political_party') %>:</dt>
+          <dd><%= @candidate.political_party.name %></dd>
+        </dl>
+        <p class="bio"><%= @candidate.biography %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row candidate-proposals">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <div class="panel panel-blue">
+        <div class="panel-heading text-lowercase">
+          <%= t('.promises.most-voted') %>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <% @most_voted.each do |promise| %>
+              <li><%= link_to promise.title, root_url %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="panel panel-blue">
+        <div class="panel-heading"><%= t('.promises.most-visualized') %></div>
+        <div class="panel-body">
+          Panel content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

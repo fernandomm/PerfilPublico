@@ -11,8 +11,11 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise'
-gem 'mysql2'
+gem 'pg'
 gem 'simple_form'
+gem 'carrierwave'
+gem 'rails_admin'
+gem 'rails-i18n', '~> 4.0.0'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
@@ -31,6 +34,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
+  gem 'rspec-collection_matchers'
 end
 group :production do
   gem 'rails_12factor'
@@ -41,3 +45,5 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+gem 'omniauth'
+gem 'omniauth-facebook'

@@ -11,15 +11,71 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018005545) do
+ActiveRecord::Schema.define(version: 20141018200518) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "candidates", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.text     "biography"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+    t.integer  "political_party_id"
+    t.string   "political_office"
+  end
+
+  add_index "candidates", ["political_party_id"], name: "index_candidates_on_political_party_id", using: :btree
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "links", force: true do |t|
+    t.integer  "promise_id"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "date"
+  end
+
+  add_index "links", ["promise_id"], name: "index_links_on_promise_id", using: :btree
+
+  create_table "political_parties", force: true do |t|
+    t.string   "name"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "promises", force: true do |t|
+    t.integer  "candidate_id"
+    t.integer  "category_id"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "up_votes",     default: 0
+    t.integer  "down_votes",   default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "visible"
+    t.string   "status"
+    t.date     "date"
+  end
+
+  add_index "promises", ["candidate_id"], name: "index_promises_on_candidate_id", using: :btree
+  add_index "promises", ["category_id"], name: "index_promises_on_category_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",    null: false
+    t.string   "encrypted_password",     default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -27,6 +83,10 @@ ActiveRecord::Schema.define(version: 20141018005545) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.boolean  "admin",                  default: false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
