@@ -20,4 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  menu:
+    home: Home
+    about: About
+    contact: Contact
+  main:
+    index:
+      heading_html: "Monitor Brazilian <br>candidates promises"
+      select_state: Select a state
