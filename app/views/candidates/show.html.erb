@@ -16,7 +16,11 @@
       <div class="panel panel-blue">
         <div class="panel-heading"><%= t('.promises.most-voted') %></div>
         <div class="panel-body">
-          Panel content
+          <ul>
+            <% @most_voted.each do |promise| %>
+              <li><%= link_to promise.title, root_url %></li>
+            <% end %>
+          </ul>
         </div>
       </div>
     </div>
