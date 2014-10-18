@@ -1,4 +1,4 @@
-Perfilpublico
+Perfilpublico [![Stories in Ready](https://badge.waffle.io/railsrumble/r14-team-83.png?label=ready&title=Ready)](https://waffle.io/railsrumble/r14-team-83)
 ================
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
