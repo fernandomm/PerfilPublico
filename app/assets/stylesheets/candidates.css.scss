@@ -1,0 +1,46 @@
+// Place all the styles related to the candidates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.candidate-header {
+	$photo-size: 150px;
+	$bg-color: #0D6D9D;
+	$fg-color: #FFF;
+
+	background-color: $bg-color;
+	color: $fg-color;
+
+	img {
+		width: $photo-size;
+		height: $photo-size;
+		background-color: $fg-color;
+		border: 5px solid $fg-color;
+	}
+	.add-candidate {
+		$btn-color: #2cbf88;
+		$btn-font-size: 30px;
+		$btn-border-color: #209969;
+
+		@extend .btn;
+		@extend .btn-lg;
+		@extend .pull-right;
+		background-color: $btn-color;
+		color: $fg-color;
+		border: none;
+		height: $btn-font-size * 2 + 20px;
+		line-height: $btn-font-size * 2;
+		width: 400px;
+		font-size: $btn-font-size;
+		margin-top: $btn-font-size;
+		border-bottom: 7px solid $btn-border-color;
+		margin-right: $btn-font-size / 2;
+
+		&:hover {
+			color: $fg-color;
+			background-color: lighten($btn-color, 5%);
+			border-bottom: 7px solid lighten($btn-border-color, 5%);
+		}
+	}
+}

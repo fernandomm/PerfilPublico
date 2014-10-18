@@ -1,0 +1,14 @@
+<div class="row candidate-header">
+  <div class="col-md-2">
+    <%= image_tag @candidate.image.url, class: 'img-circle' %>
+  </div>
+  <div class="col-md-6">
+    <h2 class="name"><%= @candidate.name %></h2>
+  </div>
+  <div class="col-md-4">
+    <%= link_to t('.add-promise'), root_url , title: t('.add-promise'), class: 'add-candidate' %>
+  </div>
+</div>
+<div class="row">
+
+</div>
