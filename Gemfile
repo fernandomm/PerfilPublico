@@ -16,6 +16,7 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'rails_admin'
 gem 'rails-i18n', '~> 4.0.0'
+gem 'fog'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]
