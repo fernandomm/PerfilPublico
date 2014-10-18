@@ -11,6 +11,12 @@
 	background-color: $color-blue;
 	color: $color-white;
 
+	h1 span {
+		@extend .text-uppercase;
+		font-weight: 100;
+		font-size: 20px;
+	}
+
 	.img {
 		@extend .img-circle;
 		@extend .pull-right;
@@ -29,4 +35,16 @@
 .candidate-proposals,
 .candidate-info {
 	margin-top: 20px;
+}
+
+.candidate-info {
+	font-size: 16px;
+	dl,
+	.bio {
+		margin: 0 auto;
+		max-width: 800px;
+	}
+	.bio {
+		margin-top: 20px;
+	}
 }

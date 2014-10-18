@@ -16,13 +16,15 @@ unless Candidate.exists?
       image: File.new('./spec/fixures/pt.jpg'))
     psdb.candidates.create(name: 'Aécio Neves', age: 54, biography: """
       Aécio Neves da Cunha is a Brazilian economist, politician and president
-      of the Brazilian Social Democracy Party
-      """, image: File.new('./spec/fixures/aecio.jpg'))
+      of the Brazilian Social Democracy Party.
+      """, image: File.new('./spec/fixures/aecio.jpg'),
+      political_office: 'president')
 
     pt.candidates.create(name: 'Dilma Rousseff', age: 66, biography: """
       Dilma Vana Rousseff is the 36th and current President of Brazil. She is
       the first woman to hold the office. She was previously the Chief of Staff
       of the President Luiz Inácio Lula da Silva from 2005 to 2010.
-      """, image: File.new('./spec/fixures/dilma.jpg'))
+      """, image: File.new('./spec/fixures/dilma.jpg'),
+      political_office: 'president')
   end
 end
