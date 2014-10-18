@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018185512) do
+ActiveRecord::Schema.define(version: 20141018195118) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20141018185512) do
 
   add_index "links", ["promise_id"], name: "index_links_on_promise_id", using: :btree
 
-  create_table "parties", force: true do |t|
+  create_table "political_parties", force: true do |t|
     t.string   "name"
     t.string   "image"
     t.datetime "created_at"
