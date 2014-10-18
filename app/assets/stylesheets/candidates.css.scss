@@ -20,22 +20,20 @@
 	}
 	.add-candidate {
 		$btn-color: #2cbf88;
-		$btn-font-size: 30px;
+		$btn-font-size: 20px;
 		$btn-border-color: #209969;
 
 		@extend .btn;
 		@extend .btn-lg;
-		@extend .pull-right;
 		background-color: $btn-color;
 		color: $fg-color;
 		border: none;
 		height: $btn-font-size * 2 + 20px;
 		line-height: $btn-font-size * 2;
-		width: 400px;
+		width: 300px;
 		font-size: $btn-font-size;
-		margin-top: $btn-font-size;
+		margin-top: $btn-font-size * 2;
 		border-bottom: 7px solid $btn-border-color;
-		margin-right: $btn-font-size / 2;
 
 		&:hover {
 			color: $fg-color;
