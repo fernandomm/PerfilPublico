@@ -4,8 +4,7 @@ Rails.application.routes.draw do
   root 'main#index'
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
-  get 'candidates/:id', to: 'candidates#show', as: :candidate
-
-  get 'candidates/:id/promises/:promise_id', to: 'promises#show', as: :promise
-
+  resources :candidates, :only => [:show] do
+    resources :promises, :only => [:show]
+  end
 end
