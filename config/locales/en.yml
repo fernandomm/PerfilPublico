@@ -28,6 +28,11 @@ en:
     index:
       heading_html: "Follow promises <br> of Brazilian candidates"
       select_state: Select a state
+  promises:
+    status:
+      accomplished: Accomplished
+      in_progress: In progress
+      not_accomplished: Not accomplished
   candidates:
     show:
       add-promise: Add Promise
