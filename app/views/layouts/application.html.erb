@@ -4,17 +4,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Perfilpublico" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Perfilpublico" %>">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
+
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <%= link_to root_url, class: "logo-header", title: "Perfil Público"  do %>
+              <h1>
+                <%= image_tag "logo.png" %>
+              </h1>
+            <% end %>
+            <nav class="menu-nav">
+              <ul>
+                <li>
+                  <%= link_to "About", root_url , title: "About" %>
+                </li>
+                <li>
+                  <%= link_to "Contact", root_url , title: "Contact"%>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+
+    <div role="main" class="main-content">
+      <%= yield %>
+    </div>
+
+    <footer class="footer">
+      Made with ♥ by brazilian crazy guys
+    </footer>
+
   </body>
 </html>

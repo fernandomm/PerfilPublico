@@ -13,3 +13,119 @@
  *= require_tree .
  *= require_self
  */
+
+@import "base/variables";
+@import "base/mixins";
+
+/*********************************************************************
+*  Common Styles
+*********************************************************************/
+body {
+	font-family: $base-font-family;
+}
+
+
+.section-title {
+	text-align: center;
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-bottom: 40px;
+	font-weight: 100;
+}
+
+/*********************************************************************
+*  Header
+*********************************************************************/
+.header {
+	height: 91px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background: $color-white;
+}
+.logo-header {
+	h1 {
+		display: inline-block;
+	}
+	float: left;
+}
+.menu-nav {
+	margin-left: 120px;
+	float: left;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+
+			a {
+				line-height: 91px;
+				padding: 0 40px;
+				font-size: 18px;
+				color: $color-dark;
+				display: block;
+				text-decoration: none;
+
+				opacity: 1;
+				transition: opacity .45s ease-in-out;
+				-moz-transition: opacity .45s ease-in-out;
+				-webkit-transition: opacity .45s ease-in-out;
+				&:hover {
+					background: #0394da;
+					color: $color-white;
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}
+
+
+/*********************************************************************
+*  Footer
+*********************************************************************/
+.footer {
+	margin: 100px 0 20px 0;
+	color: $color-grey;
+	text-align: center;
+}
+
+
+
+/*********************************************************************
+*  Featured Main
+*********************************************************************/
+
+.main-content {
+
+}
+
+.featured-content-home {
+	margin-top: 91px;
+	background: #245064 url(image_path('featured-home-bg.jpg')) center no-repeat;
+	height: 300px;
+	text-align: center;
+	width: 100%;
+	padding: 50px 0 0 0;
+	h2 {
+		color: $color-white;
+		font-size: 68px;
+	}
+}
+
+
+/*********************************************************************
+*  Map
+*********************************************************************/
+.box-map {
+	text-align: center;
+}
+
+#svg-map path { fill:#0094d9 }
+#svg-map text { fill: $color-white; font:12px Arial-BoldMT, sans-serif; cursor:pointer }
+#svg-map a{ text-decoration:none }
+#svg-map a:hover { cursor:pointer; text-decoration:none }
+#svg-map a:hover path{ fill:#003399 !important }
+#svg-map .circle { fill:#66ccff }
+#svg-map a:hover .circle { fill:#003399 !important; cursor:pointer }
