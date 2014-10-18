@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018120411) do
+ActiveRecord::Schema.define(version: 20141018140227) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20141018120411) do
     t.datetime "updated_at"
     t.boolean  "visible"
     t.string   "status"
+    t.date     "date"
   end
 
   add_index "promises", ["candidate_id"], name: "index_promises_on_candidate_id", using: :btree
