@@ -1,4 +1,4 @@
-Perfilpublico [![Stories in Ready](https://badge.waffle.io/railsrumble/r14-team-83.png?label=ready&title=Ready)](https://waffle.io/railsrumble/r14-team-83)
+Perfilpublico [ ![Codeship Status for railsrumble/r14-team-83](https://www.codeship.io/projects/3a2dc240-389f-0132-c37b-6a023c1e0863/status)](https://www.codeship.io/projects/42075) [![Stories in Ready](https://badge.waffle.io/railsrumble/r14-team-83.png?label=ready&title=Ready)](https://waffle.io/railsrumble/r14-team-83)
 ================
 
 [![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
