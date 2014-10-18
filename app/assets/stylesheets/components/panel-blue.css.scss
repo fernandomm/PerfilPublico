@@ -1,0 +1,16 @@
+@import "base/variables";
+
+.panel.panel-blue {
+	.panel-heading {
+		background-color: $color-blue;
+		color: $color-white;
+		height: 50px;
+		font-size: 30px;
+		line-height: 35px;
+	}
+	.panel-body {
+		background-color: lighten($color-blue, 50%);
+		color: lighten($color-blue, 5%);
+		font-size: 20px;
+	}
+}

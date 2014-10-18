@@ -7,14 +7,34 @@
     <h2 class="name"><%= @candidate.name %></h2>
   </div>
   <div class="col-md-5">
-    <%= link_to t('.add-promise'), root_url , title: t('.add-promise'), class: 'add-candidate' %>
+    <%= link_to t('.add-promise'), root_url , title: t('.add-promise'),
+      class: 'add-candidate' %>
+  </div>
+</div>
+<div class="row candidate-info">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="panel panel-lemon">
+      <div class="panel-heading text-uppercase">
+        <%= t('.info.about.title') %>
+      </div>
+      <div class="panel-body">
+        <dl class="dl-horizontal">
+          <dt><%= t('.info.about.name') %>:</dt>
+          <dd><%= @candidate.name %></dd>
+          <dt><%= t('.info.about.political_party') %>:</dt>
+          <dd><%= @candidate.party.name %></dd>
+        </dl>
+      </div>
+    </div>
   </div>
 </div>
 <div class="row candidate-proposals">
   <div class="row">
     <div class="col-md-5 col-md-offset-1">
       <div class="panel panel-blue">
-        <div class="panel-heading"><%= t('.promises.most-voted') %></div>
+        <div class="panel-heading text-lowercase">
+          <%= t('.promises.most-voted') %>
+        </div>
         <div class="panel-body">
           <ul>
             <% @most_voted.each do |promise| %>

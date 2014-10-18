@@ -1,0 +1,14 @@
+@import "base/variables";
+
+.panel.panel-lemon {
+	.panel-heading {
+		background-color: $color-lemon;
+		height: 40px;
+		font-size: 20px;
+		line-height: 25px;
+	}
+	.panel-body {
+		background-color: lighten($color-lemon, 25%);
+		color: $color-dark;
+	}
+}

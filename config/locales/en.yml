@@ -34,3 +34,8 @@ en:
       promises:
         most-voted: most voted promises
         most-visualized: most visualized promises
+      info:
+        about:
+          title: About
+          name: Nome
+          political_party: Political Party

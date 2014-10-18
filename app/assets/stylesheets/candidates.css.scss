@@ -4,13 +4,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "base/variables";
-
-$bg-color: #0D6D9D;
+@import "components/btn-green";
 
 .candidate-header {
 	$photo-size: 150px;
-
-	background-color: $bg-color;
+	background-color: $color-blue;
 	color: $color-white;
 
 	.img {
@@ -24,44 +22,11 @@ $bg-color: #0D6D9D;
 		background-size: cover;
 	}
 	.add-candidate {
-		$btn-color: #2cbf88;
-		$btn-font-size: 20px;
-		$btn-border-color: #209969;
-
 		@extend .btn;
-		@extend .btn-lg;
-		background-color: $btn-color;
-		color: $color-white;
-		border: none;
-		height: $btn-font-size * 2 + 20px;
-		line-height: $btn-font-size * 2;
-		width: 300px;
-		font-size: $btn-font-size;
-		margin-top: $btn-font-size * 2;
-		border-bottom: 7px solid $btn-border-color;
-
-		&:hover {
-			color: $color-white;
-			background-color: lighten($btn-color, 5%);
-			border-bottom: 7px solid lighten($btn-border-color, 5%);
-		}
+		@extend .btn-green;
 	}
 }
-.candidate-proposals {
+.candidate-proposals,
+.candidate-info {
 	margin-top: 20px;
-}
-
-.panel.panel-blue {
-	.panel-heading {
-		background-color: $bg-color;
-		color: $color-white;
-		height: 50px;
-		font-size: 30px;
-		line-height: 35px;
-	}
-	.panel-body {
-		background-color: lighten($bg-color, 50%);
-		color: #126E9D;
-		font-size: 20px;
-	}
 }
