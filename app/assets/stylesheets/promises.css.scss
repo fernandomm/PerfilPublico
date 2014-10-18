@@ -1,0 +1,123 @@
+// Place all the styles related to the candidates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "base/variables";
+@import "components/btn-green";
+
+.promise-header {
+	background-color: $color-blue;
+
+	h2 {
+		color: $color-white;
+		font-size: 30px;
+		text-transform: uppercase;
+		font-weight: 300;
+		margin-bottom: 20px;
+		span {
+			font-weight: bold;
+		}
+	}
+}
+
+
+.promise-title {
+	.category-icon {
+		padding-top: 8px;
+		img {
+			margin-bottom: 4px;
+		}
+		text-align: center;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	padding: 10px 0;
+	margin-bottom: 20px;
+	border-bottom: 1px $color-grey solid;
+	.promise-title-text {
+		font-size: 21px;
+		color: $color-blue;
+	}
+}
+
+
+
+.promise-body {
+	.date {
+		font-size: 17px;
+		color: $color-blue;
+	}
+	.social {
+		text-align: right;
+	}
+	.date-social {
+		padding-bottom: 30px;
+	}
+}
+
+
+.votation {
+	padding-bottom: 40px;
+	a {
+
+		display: inline-block;
+		width: 85px;
+		height: 85px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 85px;
+		color: #fff;
+		text-decoration: none;
+		opacity: 1;
+		transition: opacity .45s ease-in-out;
+		-moz-transition: opacity .45s ease-in-out;
+		-webkit-transition: opacity .45s ease-in-out;
+		&:hover {
+			opacity: 0.7;
+		}
+	}
+	.votation-label-like {
+		float: right;
+		line-height: 85px;
+		margin-right: 20px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.votation-label-not-like {
+		float: left;
+		line-height: 85px;
+		margin-left: 20px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.votation-like {
+		float: right;
+		background: #20d877 url(image_path('like-icon.png')) no-repeat center;
+		text-indent: -9000px;
+		box-shadow: #0eaf5a 1px 2px 0px;
+	}
+	.votation-not-like {
+		float: left;
+		background: #f4536a url(image_path('not-like-icon.png')) no-repeat center;
+		text-indent: -9000px;
+		box-shadow: #ad1f33 1px 2px 0px;
+	}
+}
+
+
+.links {
+	padding-top: 20px;
+	h4 {
+		font-size: 24px;
+		font-weight: bold;
+	}
+	ul {
+		padding: 0 20px;
+		li {
+			a {
+				color: $color-blue;
+			}
+		}
+	}
+}
