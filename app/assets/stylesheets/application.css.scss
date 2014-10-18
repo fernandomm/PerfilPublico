@@ -42,6 +42,8 @@ body {
 	position: fixed;
 	top: 0;
 	background: $color-white;
+	z-index: 10000;
+	box-shadow: 1px 0px 3px #666;
 }
 .logo-header {
 	h1 {
