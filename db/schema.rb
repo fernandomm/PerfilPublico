@@ -34,6 +34,16 @@ ActiveRecord::Schema.define(version: 20141018195118) do
     t.datetime "updated_at"
   end
 
+  create_table "identities", force: true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
+
   create_table "links", force: true do |t|
     t.integer  "promise_id"
     t.string   "url"
