@@ -24,8 +24,44 @@ pt-Br:
       in_progress: Nossos usuários indicaram que essa promessa está em progresso.
       not_accomplished: Nossos usuários indicaram que essa promessa não foi cumprida.
   candidates:
+    political_office:
+      mayor: Prefeito
+      city_councilman: Vereador
+      state_representative: Deputado estadual
+      governor: Governador
+      congressman: Deputado federal
+      senator: Senador
+      president: Presidente
     show:
       add-promise: Cadastrar Promessa
       promises:
         most-voted: promessas mais votadas
         most-visualized: promessas mais visualizadas
+  states:
+    ac: Acre
+    al: Alagoas
+    ap: Amapá
+    am: Amazonas
+    ba: Bahia
+    ce: Ceará
+    df: Distrito Federal
+    es: Espírito Santo
+    go: Goiás
+    ma: Maranhão
+    mt: Mato Grosso
+    ms: Mato Grosso do Sul
+    mg: Minas Gerais
+    pa: Pará
+    pb: Paraíba
+    pr: Paraná
+    pe: Pernambuco
+    pi: Piauí
+    rj: Rio de Janeiro
+    rn: Rio Grande do Norte
+    rs: Rio Grande do Sul
+    ro: Rondônia
+    rr: Roraima
+    sc: Santa Catarina
+    sp: São Paulo
+    se: Sergipe
+    to: Tocantins

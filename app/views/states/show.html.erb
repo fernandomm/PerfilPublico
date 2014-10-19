@@ -6,7 +6,7 @@
         </div>
       </div>
       <div class="col-md-9">
-        <h3 class="state-name">Alagoas</h3>
+        <h3 class="state-name"><%=t("states.#{params[:state]}")%></h3>
       </div>
     </div>
   </div>
@@ -14,35 +14,41 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 candidate-list">
-      <h3>President</h3>
-      <ul>
+      <% if @presidents.any? %>
+        <h3>Presidents</h3>
+        <ul>
+          <% @presidents.each do |president| %>
+            <li>
+              <%=link_to president do%>
+                <div class="candidate-list-img" style="background-image: url(<%= president.image.url %>)"></div>
+                <span class="name"><%=president.name%></span>
+              <% end %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+
+      <% previous_candidate = nil %>
+
+      <% @candidates.each do |candidate| %>
+        <% if previous_candidate.try(:political_office) != candidate.political_office %>
+          <%='<ul>'.html_safe unless previous_candidate.nil? %>
+
+          <h3><%=t("candidates.political_office.#{candidate.political_office}")%></h3>
+
+          <ul>
+        <% end %>
+
         <li>
-          <a href="#">
-            <div class="box-image"></div>
-            <span class="name">Aécio Neves</span> - Eleito em 2014
-          </a>
+          <%=link_to candidate do%>
+            <div class="candidate-list-img" style="background-image: url(<%= candidate.image.url %>)"></div>
+            <span class="name"><%=candidate.name%></span>
+          <% end %>
         </li>
-        <li>
-          <a href="#">
-            <div class="box-image"></div>
-            <span class="name">Aécio Neves</span> - Eleito em 2014
-          </a>
-        </li>
-      </ul>
-      <h3>President</h3>
-      <ul>
-        <li>
-          <a href="#">
-            <div class="box-image"></div>
-            <span class="name">Aécio Neves</span> - Eleito em 2014
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div class="box-image"></div>
-            <span class="name">Aécio Neves</span> - Eleito em 2014
-          </a>
-        </li>
+
+        <% previous_candidate = candidate %>
+      <% end %>
+
       </ul>
     </div>
   </div>
