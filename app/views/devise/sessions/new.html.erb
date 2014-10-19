@@ -1,15 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="md-col-12 box-login">
-
       <%= link_to "Sign in with Facebook", "/users/auth/facebook", class: 'btn btn-facebook' %>
-
     </div>
   </div>
 </div>
 
 
-<% # if request.referer == rails_admin_url  %>
+<% if request.referer == rails_admin_url || Rails.env.development?  %>
 
   <div class="authform">
     <%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :role => 'form'}) do |f| %>
@@ -39,8 +37,4 @@
         <% end -%>
     <% end %>
   </div>
-<% # end %>
-
-
-
-
+<% end %>
