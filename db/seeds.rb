@@ -29,6 +29,36 @@ puts 'CREATED ADMIN USER: ' << user.email
 #   end
 # end
 
+def random_state
+  ["ac",
+  "al",
+  "ap",
+  "am",
+  "ba",
+  "ce",
+  "df",
+  "es",
+  "go",
+  "ma",
+  "mt",
+  "ms",
+  "mg",
+  "pa",
+  "pb",
+  "pr",
+  "pe",
+  "pi",
+  "rj",
+  "rn",
+  "rs",
+  "ro",
+  "rr",
+  "sc",
+  "sp",
+  "se",
+  "to"].to_a.sample
+end
+
 ActiveRecord::Base.transaction do
   puts "Seeding Candidates and its Political Parties..."
   # Seeds for the competition
@@ -43,7 +73,7 @@ ActiveRecord::Base.transaction do
       Breaker of Chains;
       Mother of Dragons.
       """, image: File.new('./spec/fixures/daenerys.jpg'),
-      political_office: 'president' )
+      political_office: 'president', state: random_state)
 
   baratheonn = PoliticalParty.create(name: 'House Baratheonn')
   baratheonn.candidates.create(name: 'Joffrey Baratheonn', age: 19, biography: """
@@ -54,46 +84,46 @@ ActiveRecord::Base.transaction do
   baratheonn.candidates.create(name: 'Tommen Baratheon', age: 12,
       biography: "Tommen of the House Baratheon the First of His Name",
       image: File.new('./spec/fixures/tommen.jpg'),
-      political_office: 'city_councilman' )
+      political_office: 'city_councilman', state: random_state)
 
   lannister = PoliticalParty.create(name: 'House Lannister')
   lannister.candidates.create(name: 'Tyrion Lannister', age: 36, biography: """
       Intelligent, witty and well-read, and shares his father's skill for business
       and political maneuvering.
       """, image: File.new('./spec/fixures/tyrion.jpg'),
-      political_office: 'senator')
+      political_office: 'senator', state: random_state)
   lannister.candidates.create(name: 'Cersei Lannister', age: 40, biography: """
       Queen Regent; Lady Paramount of the Westerlands; Lady of Casterly Rock.
       """, image: File.new('./spec/fixures/cercei.png'),
-      political_office: 'senator')
+      political_office: 'senator', state: random_state)
 
 
   PoliticalParty.create(name: 'House Tyrell').candidates
     .create(name: 'Olenna Tyrell', age: 90, biography: "The Queen of Thorns.",
       image: File.new('./spec/fixures/olenna.jpg'),
-      political_office: 'congressman' )
+      political_office: 'congressman', state: random_state)
 
   stark = PoliticalParty.create(name: 'House Stark');
   stark.candidates.create(name: 'Jon Snow', age: 20,
       biography: "Lord Snow, The Bastard of Winterfell.",
       image: File.new('./spec/fixures/jon-snow.jpeg'),
-      political_office: 'congressman' )
+      political_office: 'congressman', state: random_state)
   stark.candidates.create(name: 'Catelyn Tully', age: 35,
       biography: "Catelyn Tully, or Catelyn Stark, is the wife of Lord Eddard Stark and Lady of Winterfell.",
       image: File.new('./spec/fixures/catelyn.jpg'),
-      political_office: 'state_representative' )
+      political_office: 'state_representative', state: random_state)
 
   PoliticalParty.create(name: 'House Greyjoy').candidates
     .create(name: 'Theon Greyjoy', age: 25,
       biography: "Prince of Winterfell; Captain of Sea Bitch; Lord of the Iron Islands",
       image: File.new('./spec/fixures/theon.jpg'),
-      political_office: 'city_councilman' )
+      political_office: 'city_councilman', state: random_state)
 
   PoliticalParty.create(name: 'House Tarth').candidates
     .create(name: 'Brienne of Tarth', age: 30,
       biography: "The Maid of Tarth; Brienne the Beauty.",
       image: File.new('./spec/fixures/brienne.jpg'),
-      political_office: 'state_representative' )
+      political_office: 'state_representative', state: random_state)
 end
 
 ActiveRecord::Base.transaction do
