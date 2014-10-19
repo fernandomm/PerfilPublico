@@ -14,4 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require nprogress
+//= require nprogress-ajax
+//= require nprogress-turbolinks
 //= require_tree .
