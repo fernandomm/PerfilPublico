@@ -123,13 +123,27 @@
 	}
 }
 
-.new_promise .promise_date {
-	label {
-		width: 100%;
+.new_promise {
+	margin-top: 25px;
+
+	.promise_date {
+		label {
+			width: 100%;
+		}
+
+		.form-control {
+			display: inline;
+			width: 150px;
+		}
 	}
 
-	.form-control {
-		display: inline;
-		width: 150px;
+	.promise_description textarea {
+		height: 110px;
+	}
+
+	.promise_status {
+		.form-control {
+			width: 200px;
+		}
 	}
 }
