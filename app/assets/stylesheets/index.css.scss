@@ -1,7 +1,7 @@
 @import "bootstrap";
 @import "base/variables";
 
-.candidate-search {
+.content-map  .candidate-search {
     @include center-block();
     @extend .text-center;
     margin-top: 30px;
