@@ -1,0 +1,36 @@
+<header class="top-promises-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h3><%=t('menu.top_promises')%></h3>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 top-promises-list">
+      <% @promises.each do |promise|%>
+        <div class="row top-promise-box">
+          <div class="col-md-8 top-promise-title">
+            <%=link_to promise.title, candidate_promise_path(promise.candidate, promise) %>
+          </div>
+          <div class="col-md-4 candidate-context">
+            <h3 class="media-heading text-uppercase">
+              <%= link_to promise.candidate.name, candidate_path(promise.candidate.id) %>
+            </h3>
+            <span class="text-uppercase"><%= promise.candidate.political_office %></span>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="text-center">
+            <%= will_paginate @promises %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
