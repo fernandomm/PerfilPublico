@@ -1,0 +1,22 @@
+@import "bootstrap";
+@import "base/variables";
+
+.candidate-search {
+	@include center-block();
+	@extend .text-center;
+	margin-top: 30px;
+
+	form {
+		margin: 0 auto;
+		max-width: 700px;
+	}
+	#search {
+		@include placeholder(darken($color-white, 15%));
+		@extend .input-lg;
+		@extend .form-control;
+		color: $color-white;
+		background-color: $color-blue;
+		height: $input-height-large * 1.5;
+		font-size: $input-height-large * 0.6;
+	}
+}

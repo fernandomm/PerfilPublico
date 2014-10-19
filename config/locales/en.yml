@@ -28,6 +28,8 @@ en:
     index:
       heading_html: "Follow promises <br> of Brazilian candidates"
       select_state: Select a state
+      search-placeholder: type the candidate's name
+      search: search
   promises:
     waiting_approval: Your promise was created but it won't show up until a moderator approves it.
     status:

@@ -30,6 +30,7 @@
 	.add-candidate {
 		@extend .btn;
 		@extend .btn-green;
+		margin-top: $photo-size / 3;
 	}
 }
 .candidate-proposals,
