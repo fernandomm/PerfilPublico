@@ -21,12 +21,8 @@ class PromisesController < ApplicationController
   end
 
   def show
-    @promise = Promise.find(params[:id]).increment(:visualization_count)
-    begin
-      @promise.save
-    rescue Exception => e
-      puts e.inspect
-    end
+    @promise = Promise.find(params[:id])
+    @promise.increment!(:visualization_count)
   end
 
   private
