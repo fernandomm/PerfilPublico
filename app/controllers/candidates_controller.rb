@@ -9,6 +9,9 @@ class CandidatesController < ApplicationController
                     .order('up_votes - down_votes DESC').limit(5)
     @most_visualized = @candidate.promises.visible
                     .order(visualization_count: :desc).limit(5)
+
+    @promises = @candidate.promises.visible
+                    .order(created_at: :desc)
   end
 
   protected

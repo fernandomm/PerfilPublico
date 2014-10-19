@@ -77,40 +77,30 @@
   <div class="row candidate-promises-list">
     <div class="col-md-12">
     <h2 class="promises-list-title">Promises</h2>
-      <ul>
-        <li>
-          <div class="promise row">
-            <div class="promise-category col-md-2">
-              <span class="category-label">road</span>
+      <% unless @promises.empty?  %>
+        <ul>
+          <% @promises.each do |promise| %>
+          <li>
+            <div class="promise row">
+              <div class="promise-category col-md-2">
+                <span class="category-label">road</span>
+              </div>
+              <div class="box-promise col-md-10">
+                <div class="promise-icon"></div>
+                  <%= link_to candidate_promise_path(@candidate.id, promise) do %>
+                  <h4><%= promise.title %></h4>
+                  <p>
+                    <%= promise.description %>
+                  </p>
+                  <% end %>
+              </div>
             </div>
-            <div class="box-promise col-md-10">
-              <div class="promise-icon"></div>
-              <a href="#">
-                <h4>Pavimentação da BR 114 no estado de Alagoas</h4>
-                <p>
-                  Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! E que abundância meu irmão viuu!! Assim você vai matar o papai. Só digo uma coisa, Domingo ela não vai! Danadaa!! Vem minha odalisca, agora faz essa cobra coral subir!!! Pau que nasce torto, Nunca se endireita.
-                </p>
-              </a>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="promise row">
-            <div class="promise-category col-md-2">
-              <span class="category-label">road</span>
-            </div>
-            <div class="box-promise col-md-10">
-              <div class="promise-icon"></div>
-              <a href="#">
-                <h4>Pavimentação da BR 114 no estado de Alagoas</h4>
-                <p>
-                  Eiiitaaa Mainhaaa!! Esse Lorem ipsum é só na sacanageeem!! E que abundância meu irmão viuu!! Assim você vai matar o papai. Só digo uma coisa, Domingo ela não vai! Danadaa!! Vem minha odalisca, agora faz essa cobra coral subir!!! Pau que nasce torto, Nunca se endireita.
-                </p>
-              </a>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+          <% end %>
+        </ul>
+      <% else %>
+        This profile don't have approved promises. Be the first to <%= link_to "add one", new_candidate_promise_path(@candidate) %>.
+      <% end %>
     </div>
   </div>
 </div>
