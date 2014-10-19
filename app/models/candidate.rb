@@ -1,4 +1,5 @@
 class Candidate < ActiveRecord::Base
+  self.per_page = 10
   belongs_to :political_party
   has_many :promises
 
@@ -12,7 +13,9 @@ class Candidate < ActiveRecord::Base
     ['mayor', 'city_councilman', 'state_representative', 'governor', 'congressman', 'senator', 'president']
   end
 
-  def self.search(search)
+  def self.search(search, page = 1)
     where("unaccent(name) ilike unaccent(?)", "%#{search}%")
+      .order(name: :asc)
+      .page(page)
   end
 end
