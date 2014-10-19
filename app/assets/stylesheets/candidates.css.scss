@@ -25,8 +25,30 @@ $photo-size: 150px;
 	}
 }
 .candidate-proposals,
-.candidate-info {
+.candidate-info,
+.candidate-comments {
 	margin-top: 20px;
+}
+
+.candidate-proposals {
+	li.accomplished {
+		list-style-image: image-url('accomplished.png');
+	}
+
+	li.in_progress {
+		list-style-image: image-url('in_progress.png');
+	}
+
+	li.not_accomplished {
+		list-style-image: image-url('not_accomplished.png');
+	}
+}
+
+.candidate-comments {
+	h4 {
+		font-size: 24px;
+		font-weight: bold;
+	}
 }
 
 .candidate-info {

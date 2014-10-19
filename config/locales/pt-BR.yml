@@ -12,10 +12,17 @@ pt-Br:
       select_state: Selecione um estado
   promises:
     waiting_approval: A promessa foi criada mas ela não irá aparecer até que um moderador aprove.
+    no_links: Nenhum link para provar que essa promessa foi feita.
+    vote_registered: Seu voto foi registrado.
+    already_voted: You've already voted in this promise.
     status:
       accomplished: Cumprida
       in_progress: Em progresso
       not_accomplished: Não cumprida
+    status_info:
+      accomplished: Nossos usuários indicaram que essa promessa foi cumprida.
+      in_progress: Nossos usuários indicaram que essa promessa está em progresso.
+      not_accomplished: Nossos usuários indicaram que essa promessa não foi cumprida.
   candidates:
     show:
       add-promise: Cadastrar Promessa

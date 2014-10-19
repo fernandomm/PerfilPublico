@@ -14,10 +14,12 @@ gem 'devise'
 gem 'pg'
 gem 'simple_form', '~> 3.1.0.rc2'
 gem 'carrierwave'
+gem 'rmagick', require: false
 gem 'rails_admin'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'unicorn'
 gem 'nprogress-rails'
+gem 'will_paginate'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

@@ -1,6 +1,6 @@
 class CandidatesController < ApplicationController
   def index
-    @candidates = Candidate.search(params[:search])
+    @candidates = Candidate.search(params[:search], params[:page])
   end
 
   def show
