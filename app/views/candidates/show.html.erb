@@ -42,7 +42,7 @@
       <div class="panel-body">
         <ul>
           <% @most_voted.each do |promise| %>
-            <li>
+            <li class="<%=promise.status%>">
               <%= link_to promise.title,
                 candidate_promise_path(@candidate.id, promise.id) %>
             </li>
@@ -57,7 +57,7 @@
       <div class="panel-body">
         <ul>
           <% @most_visualized.each do |promise| %>
-            <li>
+            <li class="<%=promise.status%>">
               <%= link_to promise.title,
                 candidate_promise_path(@candidate.id, promise.id) %>
             </li>

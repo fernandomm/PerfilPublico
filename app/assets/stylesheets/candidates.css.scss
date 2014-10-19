@@ -29,6 +29,20 @@ $photo-size: 150px;
 	margin-top: 20px;
 }
 
+.candidate-proposals {
+	li.accomplished {
+		list-style-image: image-url('accomplished.png');
+	}
+
+	li.in_progress {
+		list-style-image: image-url('in_progress.png');
+	}
+
+	li.not_accomplished {
+		list-style-image: image-url('not_accomplished.png');
+	}
+}
+
 .candidate-info {
 	font-size: 16px;
 	dl,
