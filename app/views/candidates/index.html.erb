@@ -10,17 +10,17 @@
     <ul class="media-list">
       <% @candidates.each do |candidate| %>
         <li class="media">
-        <a class="pull-left" href="#">
-          <div class="candidate-list-img"
-            style="background-image: url(<%= candidate.image.url %>)"></div>
-        </a>
-        <div class="media-body">
-          <h3 class="media-heading text-uppercase">
-            <%= link_to candidate.name, candidate_path(candidate.id) %>
-          </h3>
-          <span class="text-uppercase"><%= candidate.political_office %></span>
-        </div>
-      </li>
+          <%= link_to candidate, :class => 'pull-left' do %>
+           <div class="candidate-list-img" style="background-image: url(<%= candidate.image.url %>)"></div>
+          <% end %>
+
+          <div class="media-body">
+            <h3 class="media-heading text-uppercase">
+              <%= link_to candidate.name, candidate %>
+            </h3>
+            <span class="text-uppercase"><%=t("candidates.political_office.#{candidate.political_office}")%></span>
+          </div>
+        </li>
       <% end %>
     </ul>
   </div>
