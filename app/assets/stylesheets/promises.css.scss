@@ -131,11 +131,23 @@
 		li {
 			a {
 				color: $color-blue;
+
 			}
 		}
 	}
 }
 
+
+.new-promise-header {
+	background-color: $color-blue;
+	color: $color-white;
+	a {
+		color: $color-grey;
+		&:hover {
+			color: $color-white;
+		}
+	}
+}
 .new_promise {
 	margin-top: 25px;
 
