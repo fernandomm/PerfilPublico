@@ -30,20 +30,16 @@ $photo-size: 150px;
 }
 
 .candidate-proposals {
-	li {
-		list-style-type: square;
-	}
-
 	li.accomplished {
-		color: green;
+		list-style-image: image-url('accomplished.png');
 	}
 
 	li.in_progress {
-		color: yellow;
+		list-style-image: image-url('in_progress.png');
 	}
 
 	li.not_accomplished {
-		color: red;
+		list-style-image: image-url('not_accomplished.png');
 	}
 }
 
