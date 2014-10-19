@@ -55,10 +55,12 @@
     </header>
 
     <div role="main" class="main-content">
-      <div class="container">
-        <% if flash[:notice] %><div class="alert alert-success"><%= flash[:notice] %></div><% end %>
-        <% if flash[:alert] %><div class="alert alert-danger"><%= flash[:alert] %></div><% end %>
-      </div>
+      <% if !flash.empty? %>
+        <div class="container">
+          <% if flash[:notice] %><div class="alert alert-success"><%= flash[:notice] %></div><% end %>
+          <% if flash[:alert] %><div class="alert alert-danger"><%= flash[:alert] %></div><% end %>
+        </div>
+      <% end %>
 
       <%= yield %>
     </div>
