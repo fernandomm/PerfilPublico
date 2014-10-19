@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
   resources :candidates, :only => [:show] do
-    resources :promises, :only => [:show]
+    resources :promises, :only => [:show, :new, :create]
   end
 end
