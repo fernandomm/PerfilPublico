@@ -10,4 +10,10 @@ class Promise < ActiveRecord::Base
   def status_enum
     ['accomplished', 'in_progress', 'not_accomplished']
   end
+
+  def status_enum_i18n
+    status_enum.collect{|s| 
+      [I18n.t("promises.status.#{s}"), s]
+    }
+  end
 end

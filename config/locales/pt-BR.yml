@@ -7,6 +7,12 @@ pt-Br:
     index:
       heading_html: "Monitore as promessas<br> dos candidatos no Brasil"
       select_state: Selecione um estado
+  promises:
+    waiting_approval: A promessa foi criada mas ela não irá aparecer até que um moderador aprove.
+    status:
+      accomplished: Cumprida
+      in_progress: Em progresso
+      not_accomplished: Não cumprida
   candidates:
     show:
       add-promise: Cadastrar Promessa

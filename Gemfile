@@ -12,7 +12,7 @@ gem 'spring',        group: :development
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'pg'
-gem 'simple_form'
+gem 'simple_form', '~> 3.1.0.rc2'
 gem 'carrierwave'
 gem 'rails_admin'
 gem 'rails-i18n', '~> 4.0.0'

@@ -1,0 +1,19 @@
+<div class="container">
+  <%= simple_form_for([@candidate, @promise], :html => {:role => "form-horizontal"}) do |f| %>
+    <div class="well">
+      <%=f.association :category, :collection => Category.order(:name)%>
+
+      <%=f.input :title%>
+
+      <%=f.input :description%>
+
+      <%=f.input :date%>
+
+      <%=f.input :status, :collection => @promise.status_enum_i18n%>
+
+      <div class="form-actions">
+        <%= f.button :submit, :class => "btn-primary submit" %>
+      </div>
+    </div>
+  <% end %>
+</div>
