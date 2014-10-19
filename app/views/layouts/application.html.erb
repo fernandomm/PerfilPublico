@@ -3,7 +3,20 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Perfil Público" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Perfilpublico" %>">
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "PerfilPublico is a website that focus on giving an overall look about what politicians proposed and what they actually did when they got elected." %>">
+
+
+    <!-- Facebook -->
+    <meta property="og:title" content="Perfil Público"/>
+    <meta property="og:site_name" content="Perfil Público"/>
+    <meta property="og:url" content="<%= request.original_url %>"/>
+    <meta property="og:image" content="<%= asset_url('fb-share.jpg') %>"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="PerfilPublico is a website that focus on giving an overall look about what politicians proposed and what they actually did when they got elected."/>
+
+
+
+
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
