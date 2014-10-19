@@ -24,11 +24,11 @@
   </div>
   <div class="promise-body container">
     <div class="row date-social">
+      <div class="col-md-9 promise-info">
+        <%=render 'status', :promise => @promise%>
+      </div>
       <div class="col-md-3 date">
         <%=l @promise.date, format: :long%>
-      </div>
-      <div class="col-md-9 social">
-        Social Links
       </div>
     </div>
     <div class="row votation">
