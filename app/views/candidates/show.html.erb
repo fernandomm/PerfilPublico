@@ -42,7 +42,10 @@
       <div class="panel-body">
         <ul>
           <% @most_voted.each do |promise| %>
-            <li><%= link_to promise.title, root_url %></li>
+            <li>
+              <%= link_to promise.title,
+                candidate_promise_path(@candidate.id, promise.id) %>
+            </li>
           <% end %>
         </ul>
       </div>
@@ -52,7 +55,14 @@
     <div class="panel panel-blue">
       <div class="panel-heading"><%= t('.promises.most-visualized') %></div>
       <div class="panel-body">
-        Panel content
+        <ul>
+          <% @most_visualized.each do |promise| %>
+            <li>
+              <%= link_to promise.title,
+                candidate_promise_path(@candidate.id, promise.id) %>
+            </li>
+          <% end %>
+        </ul>
       </div>
     </div>
   </div>
