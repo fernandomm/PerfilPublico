@@ -1,4 +1,6 @@
 class PromisesController < ApplicationController
+  before_action :authenticate_user!, :only => [:new, :create]
+
   def new
     @candidate = Candidate.find params[:candidate_id]
 
@@ -10,7 +12,7 @@ class PromisesController < ApplicationController
 
     @promise = @candidate.promises.build(promise_params)
     @promise.visible = false
-    
+
     if @promise.save
       redirect_to @candidate
     else
