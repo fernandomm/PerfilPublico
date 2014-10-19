@@ -1,3 +1,14 @@
+<header class="new-promise-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        Hello, <%= current_user.name %> - <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+      </div>
+    </div>
+  </div>
+</header>
+
+
 <div class="container">
   <%= simple_form_for([@candidate, @promise], :html => {:role => "form-horizontal"}) do |f| %>
     <div class="well">
