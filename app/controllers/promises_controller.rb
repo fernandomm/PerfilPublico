@@ -21,7 +21,9 @@ class PromisesController < ApplicationController
   end
 
   def show
-    @promise = Promise.find(params[:id])
+    @candidate = Candidate.find params[:candidate_id]
+
+    @promise = @candidate.promises.find(params[:id])
     @promise.increment!(:visualization_count)
   end
 
