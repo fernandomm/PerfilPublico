@@ -25,7 +25,8 @@ $photo-size: 150px;
 	}
 }
 .candidate-proposals,
-.candidate-info {
+.candidate-info,
+.candidate-comments {
 	margin-top: 20px;
 }
 
@@ -40,6 +41,13 @@ $photo-size: 150px;
 
 	li.not_accomplished {
 		list-style-image: image-url('not_accomplished.png');
+	}
+}
+
+.candidate-comments {
+	h4 {
+		font-size: 24px;
+		font-weight: bold;
 	}
 }
 
