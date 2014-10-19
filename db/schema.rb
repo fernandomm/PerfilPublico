@@ -71,9 +71,6 @@ ActiveRecord::Schema.define(version: 20141019124932) do
   add_index "promises", ["candidate_id"], name: "index_promises_on_candidate_id", using: :btree
   add_index "promises", ["category_id"], name: "index_promises_on_category_id", using: :btree
 
-  create_table "unnacents", force: true do |t|
-  end
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
