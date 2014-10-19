@@ -1,77 +1,116 @@
-<div class="row candidate-header">
-  <div class="col-md-2 col-md-offset-1">
-    <div class="candidate-img" style="background-image: url(<%= @candidate.image.url %>)">
+<div class="candidate-header">
+  <div class="container">
+    <div class="col-md-2">
+      <div class="candidate-img" style="background-image: url(<%= @candidate.image.url %>)">
+      </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    <h1>
-      <%= @candidate.name %>
-      <br>
-      <span><%=t("candidates.political_office.#{@candidate.political_office}")%></span>
-    </h1>
-  </div>
-  <div class="col-md-5">
-    <%= link_to t('.add-promise'), new_candidate_promise_path(@candidate) , title: t('.add-promise'),
-      class: 'add-candidate' %>
-  </div>
-</div>
-<div class="row candidate-info">
-  <div class="col-md-10 col-md-offset-1">
-    <div class="panel panel-lemon">
-      <div class="panel-heading text-uppercase">
-        <%= t('.info.about.title') %>
-      </div>
-      <div class="panel-body">
-        <dl class="dl-horizontal">
-          <dt><%= t('.info.about.name') %>:</dt>
-          <dd><%= @candidate.name %></dd>
-          <dt><%= t('.info.about.political_party') %>:</dt>
-          <dd><%= @candidate.political_party.name %></dd>
-        </dl>
-        <p class="bio"><%= @candidate.biography %></p>
-      </div>
+    <div class="col-md-6">
+      <h1>
+        <%= @candidate.name %>
+        <br>
+        <span><%=t("candidates.political_office.#{@candidate.political_office}")%></span>
+      </h1>
+    </div>
+    <div class="col-md-4">
+      <%= link_to t('.add-promise'), new_candidate_promise_path(@candidate) , title: t('.add-promise'),
+        class: 'add-candidate' %>
     </div>
   </div>
 </div>
-<div class="row candidate-proposals">
-  <div class="col-md-5 col-md-offset-1">
-    <div class="panel panel-blue">
-      <div class="panel-heading text-lowercase">
-        <%= t('.promises.most-voted') %>
-      </div>
-      <div class="panel-body">
-        <ul>
-          <% @most_voted.each do |promise| %>
-            <li class="<%=promise.status%>">
-              <%= link_to promise.title,
-                candidate_promise_path(@candidate.id, promise.id) %>
-            </li>
-          <% end %>
-        </ul>
+
+<div class="container">
+  <div class="row candidate-info">
+    <div class="col-md-12">
+      <div class="panel panel-lemon">
+        <div class="panel-heading text-uppercase">
+          <%= t('.info.about.title') %>
+        </div>
+        <div class="panel-body">
+          <dl class="dl-horizontal">
+            <dt><%= t('.info.about.name') %>:</dt>
+            <dd><%= @candidate.name %></dd>
+            <dt><%= t('.info.about.political_party') %>:</dt>
+            <dd><%= @candidate.political_party.name %></dd>
+          </dl>
+          <p class="bio"><%= @candidate.biography %></p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-5">
-    <div class="panel panel-blue">
-      <div class="panel-heading"><%= t('.promises.most-visualized') %></div>
-      <div class="panel-body">
-        <ul>
-          <% @most_visualized.each do |promise| %>
-            <li class="<%=promise.status%>">
-              <%= link_to promise.title,
-                candidate_promise_path(@candidate.id, promise.id) %>
-            </li>
-          <% end %>
-        </ul>
+  <div class="row candidate-proposals">
+    <div class="col-md-6">
+      <div class="panel panel-blue">
+        <div class="panel-heading text-lowercase">
+          <%= t('.promises.most-voted') %>
+        </div>
+        <div class="panel-body">
+          <ul>
+            <% @most_voted.each do |promise| %>
+              <li class="<%=promise.status%>">
+                <%= link_to promise.title,
+                  candidate_promise_path(@candidate.id, promise.id) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="panel panel-blue">
+        <div class="panel-heading"><%= t('.promises.most-visualized') %></div>
+        <div class="panel-body">
+          <ul>
+            <% @most_visualized.each do |promise| %>
+              <li class="<%=promise.status%>">
+                <%= link_to promise.title,
+                  candidate_promise_path(@candidate.id, promise.id) %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<div class="row candidate-comments">
-  <div class="col-md-10 col-md-offset-1">
-    <h4>Comments</h4>
+<div class="container">
+  <div class="row candidate-promises-list">
+    <div class="col-md-12">
+    <h2 class="promises-list-title">Promises</h2>
+      <% unless @promises.empty?  %>
+        <ul>
+          <% @promises.each do |promise| %>
+          <li>
+            <div class="promise row">
+              <div class="promise-category col-md-2">
+                <span class="category-label">road</span>
+              </div>
+              <div class="box-promise col-md-10">
+                <div class="promise-icon"></div>
+                  <%= link_to candidate_promise_path(@candidate.id, promise) do %>
+                  <h4><%= promise.title %></h4>
+                  <p>
+                    <%= promise.description %>
+                  </p>
+                  <% end %>
+              </div>
+            </div>
+          </li>
+          <% end %>
+        </ul>
+      <% else %>
+        This profile don't have approved promises. Be the first to <%= link_to "add one", new_candidate_promise_path(@candidate) %>.
+      <% end %>
+    </div>
+  </div>
+</div>
 
-    <div class="fb-comments" data-href="http://perfilpublico.r14.railsrumble.com" data-numposts="10" data-width="100%" data-colorscheme="light"></div>
+<div class="container">
+  <div class="row candidate-comments">
+    <div class="col-md-12">
+      <h4>Comments</h4>
+
+      <div class="fb-comments" data-href="http://perfilpublico.r14.railsrumble.com" data-numposts="10" data-width="100%" data-colorscheme="light"></div>
+    </div>
   </div>
 </div>
