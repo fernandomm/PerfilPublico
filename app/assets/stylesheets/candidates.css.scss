@@ -29,6 +29,24 @@ $photo-size: 150px;
 	margin-top: 20px;
 }
 
+.candidate-proposals {
+	li {
+		list-style-type: square;
+	}
+
+	li.accomplished {
+		color: green;
+	}
+
+	li.in_progress {
+		color: yellow;
+	}
+
+	li.not_accomplished {
+		color: red;
+	}
+}
+
 .candidate-info {
 	font-size: 16px;
 	dl,
