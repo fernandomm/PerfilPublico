@@ -56,8 +56,10 @@ $photo-size: 150px;
 				.box-image {
 					height: 48px;
 					width: 48px;
-					background: url(image_path('flag.jpg')) center no-repeat;
-					background-size: 48px 48px;
+					background-repeat: no-repeat;
+					background-position: center center;
+					border-radius: 50%;
+					background-size: 100% ;
 					float: left;
 					margin-right: 20px;
 				}
