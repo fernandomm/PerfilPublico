@@ -7,6 +7,7 @@ class Promise < ActiveRecord::Base
   validates :status, inclusion: {in: :status_enum, allow_nil: true}
 
   scope :visible, -> { where(visible: true) }
+  scope :top_promises, -> { order('up_votes - down_votes') }
 
   def status_enum
     ['accomplished', 'in_progress', 'not_accomplished']

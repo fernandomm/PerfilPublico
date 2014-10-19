@@ -4,8 +4,7 @@ pt-Br:
     btn: pesquisar
   menu:
     home: Início
-    about: Sobre
-    contact: Contato
+    top_promises: Principais promessas
   main:
     index:
       heading_html: "Monitore as promessas<br> dos candidatos no Brasil"

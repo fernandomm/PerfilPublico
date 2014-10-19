@@ -22,8 +22,7 @@
 en:
   menu:
     home: Home
-    about: About
-    contact: Contact
+    top_promises: Top promises
   search:
     placeholder: type the candidate's name
     btn: search

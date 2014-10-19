@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
 
   get '/state/:state' => 'states#show', as: :state
+  get 'top-promises' => 'top_promises#index'
 
 
   resources :candidates, :only => [:show, :index] do
