@@ -5,6 +5,8 @@ class Promise < ActiveRecord::Base
   validates_presence_of :title, :description, :candidate_id, :category_id, :status, :date
   validates :status, inclusion: {in: :status_enum, allow_nil: true}
 
+  scope :visible, -> { where(visible: true) }
+
   def status_enum
     ['accomplished', 'in_progress', 'not_accomplished']
   end

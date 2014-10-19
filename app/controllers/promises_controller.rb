@@ -21,7 +21,8 @@ class PromisesController < ApplicationController
   end
 
   def show
-
+    @promise = Promise.find(params[:id])
+    @promise.increment!(:visualization_count)
   end
 
   private

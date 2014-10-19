@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018200518) do
+ActiveRecord::Schema.define(version: 20141019022818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,13 +57,14 @@ ActiveRecord::Schema.define(version: 20141018200518) do
     t.integer  "category_id"
     t.string   "title"
     t.text     "description"
-    t.integer  "up_votes",     default: 0
-    t.integer  "down_votes",   default: 0
+    t.integer  "up_votes",            default: 0
+    t.integer  "down_votes",          default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "visible"
     t.string   "status"
     t.date     "date"
+    t.integer  "visualization_count", default: 0
   end
 
   add_index "promises", ["candidate_id"], name: "index_promises_on_candidate_id", using: :btree
