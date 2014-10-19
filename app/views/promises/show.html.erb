@@ -31,16 +31,6 @@
         <%=l @promise.date, format: :long%>
       </div>
     </div>
-    <div class="row votation">
-      <div class="col-md-6">
-          <a href="#" class="votation-like">+</a>
-          <span class="votation-label-like">Right</span>
-      </div>
-      <div class="col-md-6">
-          <a href="#" class="votation-not-like">-</a>
-          <span class="votation-label-not-like">debit</span>
-      </div>
-    </div>
     <div class="row">
       <div class="col-md-12">
         <%=simple_format @promise.description%>
@@ -63,17 +53,20 @@
         </div>
       </div>
     </div>
-    <div class="row image-list">
-      <div class="col-md-3">
 
+    <h4>What do you think about this proposal?</h4>
+
+    <div class="row votation">
+      <div class="col-md-6">
+        <%=link_to '+', vote_up_candidate_promise_path(@candidate, @promise), :class => 'votation-like'%>
+        <span class="votation-label-like">Approve <span class="badge"><%=@promise.up_votes.to_i%></span</span>
       </div>
-      <div class="col-md-3">
-
-      </div>
-      <div class="col-md-3">
-
+      <div class="col-md-6">
+        <%=link_to '+', vote_down_candidate_promise_path(@candidate, @promise), :class => 'votation-not-like'%>
+        <span class="votation-label-not-like"><span class="badge"><%=@promise.down_votes.to_i%></span> Disapprove</span>
       </div>
     </div>
+    
 
     <h4>Comments</h4>
 

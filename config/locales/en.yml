@@ -34,6 +34,8 @@ en:
   promises:
     waiting_approval: Your promise was created but it won't show up until a moderator approves it.
     no_links: No links were provided to prove that this promise was made.
+    vote_registered: Your vote was registered.
+    already_voted: You've already voted in this promise.
     status:
       accomplished: Accomplished
       in_progress: In progress
