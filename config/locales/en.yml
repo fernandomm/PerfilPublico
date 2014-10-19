@@ -29,6 +29,7 @@ en:
       heading_html: "Follow promises <br> of Brazilian candidates"
       select_state: Select a state
   promises:
+    waiting_approval: Your promise was created but it won't show up until a moderator approves it.
     status:
       accomplished: Accomplished
       in_progress: In progress

@@ -14,7 +14,7 @@ class PromisesController < ApplicationController
     @promise.visible = false
 
     if @promise.save
-      redirect_to @candidate
+      redirect_to @candidate, :notice => I18n.t('promises.waiting_approval')
     else
       render 'new'
     end

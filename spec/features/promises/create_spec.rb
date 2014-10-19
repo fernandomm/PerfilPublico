@@ -24,5 +24,7 @@ feature 'Promise creation' do
     expect {
       click_button 'Create'
     }.to change(Promise, :count).by(1)
+
+    expect(page).to have_selector('div.alert-success')
   end
 end
