@@ -34,27 +34,25 @@
   </div>
 </div>
 <div class="row candidate-proposals">
-  <div class="row">
-    <div class="col-md-5 col-md-offset-1">
-      <div class="panel panel-blue">
-        <div class="panel-heading text-lowercase">
-          <%= t('.promises.most-voted') %>
-        </div>
-        <div class="panel-body">
-          <ul>
-            <% @most_voted.each do |promise| %>
-              <li><%= link_to promise.title, root_url %></li>
-            <% end %>
-          </ul>
-        </div>
+  <div class="col-md-5 col-md-offset-1">
+    <div class="panel panel-blue">
+      <div class="panel-heading text-lowercase">
+        <%= t('.promises.most-voted') %>
+      </div>
+      <div class="panel-body">
+        <ul>
+          <% @most_voted.each do |promise| %>
+            <li><%= link_to promise.title, root_url %></li>
+          <% end %>
+        </ul>
       </div>
     </div>
-    <div class="col-md-5">
-      <div class="panel panel-blue">
-        <div class="panel-heading"><%= t('.promises.most-visualized') %></div>
-        <div class="panel-body">
-          Panel content
-        </div>
+  </div>
+  <div class="col-md-5">
+    <div class="panel panel-blue">
+      <div class="panel-heading"><%= t('.promises.most-visualized') %></div>
+      <div class="panel-body">
+        Panel content
       </div>
     </div>
   </div>
