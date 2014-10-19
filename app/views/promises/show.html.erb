@@ -24,11 +24,11 @@
   </div>
   <div class="promise-body container">
     <div class="row date-social">
+      <div class="col-md-9 promise-info">
+        <%=render 'status', :promise => @promise%>
+      </div>
       <div class="col-md-3 date">
         <%=l @promise.date, format: :long%>
-      </div>
-      <div class="col-md-9 social">
-        Social Links
       </div>
     </div>
     <div class="row votation">
@@ -74,5 +74,9 @@
 
       </div>
     </div>
+
+    <h4>Comments</h4>
+
+    <div class="fb-comments" data-href="http://perfilpublico.r14.railsrumble.com" data-numposts="10" data-width="100%" data-colorscheme="light"></div>
   </div>
 </div>

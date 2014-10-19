@@ -19,6 +19,7 @@ gem 'rails_admin'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'unicorn'
 gem 'nprogress-rails'
+gem 'will_paginate'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

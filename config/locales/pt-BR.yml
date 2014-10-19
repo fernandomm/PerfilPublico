@@ -17,6 +17,10 @@ pt-Br:
       accomplished: Cumprida
       in_progress: Em progresso
       not_accomplished: Não cumprida
+    status_info:
+      accomplished: Nossos usuários indicaram que essa promessa foi cumprida.
+      in_progress: Nossos usuários indicaram que essa promessa está em progresso.
+      not_accomplished: Nossos usuários indicaram que essa promessa não foi cumprida.
   candidates:
     show:
       add-promise: Cadastrar Promessa

@@ -52,12 +52,24 @@
 	.date {
 		font-size: 17px;
 		color: $color-blue;
-	}
-	.social {
 		text-align: right;
 	}
 	.date-social {
 		padding-bottom: 30px;
+	}
+
+	.promise-info {
+		font-size: 12px;
+
+		img {
+			float: left;
+			padding-right: 4px;
+		}
+	}
+
+	h4 {
+		font-size: 24px;
+		font-weight: bold;
 	}
 }
 
@@ -113,10 +125,7 @@
 
 .links {
 	padding-top: 20px;
-	h4 {
-		font-size: 24px;
-		font-weight: bold;
-	}
+	
 	ul {
 		padding: 0 20px;
 		li {
