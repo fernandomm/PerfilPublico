@@ -11,6 +11,7 @@ $photo-size: 150px;
 .candidate-header {
 	background-color: $color-blue;
 	color: $color-white;
+	@include clearfix;
 
 	h1 span {
 		@extend .text-uppercase;
@@ -22,6 +23,8 @@ $photo-size: 150px;
 		@extend .btn;
 		@extend .btn-green;
 		margin-top: $photo-size / 3;
+		float: right;
+		margin-right: 30px;
 	}
 }
 .candidate-proposals,
@@ -80,3 +83,78 @@ $photo-size: 150px;
 	width: $photo-size / 2;
 	height: $photo-size / 2;
 }
+
+
+
+
+
+
+
+.candidate-promises-list {
+	.promises-list-title{
+		font-weight: bold;
+		color: $color-blue;
+		font-size: 38px;
+		margin-bottom: 20px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			margin-bottom: 30px;
+
+			.promise {
+				.promise-category {
+					text-align: right;
+					.category-label {
+						margin-right: 40px;
+						font-weight: bold;
+						line-height: 60px;
+						font-size: 25px;
+						text-transform: uppercase;
+					}
+				}
+				.box-promise {
+					.promise-icon {
+						width: 20px;
+						height: 20px;
+						background: #e1f5ff;
+						-ms-transform: rotate(45deg); /* IE 9 */
+					    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+					    transform: rotate(45deg);
+					    position: absolute;
+					    top: 19px;
+					    left: -9px;
+					}
+					background-color: #e1f5ff;
+					// padding: 10px 20px;
+					border-radius: 10px;
+					position: relative;
+					h4 {
+						font-weight: bold;
+					}
+					a {
+						color: $color-blue;
+					}
+				}
+			}
+			&:nth-child(odd) {
+				.box-promise {
+					float: left;
+					.promise-icon {
+						right: -9px;
+						left: auto;
+					}
+				}
+				.promise-category {
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+
+
+
