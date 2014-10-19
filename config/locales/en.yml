@@ -33,6 +33,7 @@ en:
       select_state: Select a state
   promises:
     waiting_approval: Your promise was created but it won't show up until a moderator approves it.
+    no_links: No links were provided to prove that this promise was made.
     status:
       accomplished: Accomplished
       in_progress: In progress
