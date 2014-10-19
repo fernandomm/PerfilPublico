@@ -12,6 +12,7 @@ pt-Br:
       select_state: Selecione um estado
   promises:
     waiting_approval: A promessa foi criada mas ela não irá aparecer até que um moderador aprove.
+    no_links: Nenhum link para provar que essa promessa foi feita.
     status:
       accomplished: Cumprida
       in_progress: Em progresso

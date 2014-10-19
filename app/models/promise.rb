@@ -1,6 +1,7 @@
 class Promise < ActiveRecord::Base
   belongs_to :candidate
   belongs_to :category
+  has_many :links
 
   validates_presence_of :title, :description, :candidate_id, :category_id, :status, :date
   validates :status, inclusion: {in: :status_enum, allow_nil: true}
