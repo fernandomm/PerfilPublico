@@ -20,7 +20,7 @@
           <% @presidents.each do |president| %>
             <li>
               <%=link_to president do%>
-                <div class="candidate-list-img" style="background-image: url(<%= president.image.url %>)"></div>
+                <div class="box-image" style="background-image: url(<%= president.image.url %>)"></div>
                 <span class="name"><%=president.name%></span>
               <% end %>
             </li>
