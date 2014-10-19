@@ -1,4 +1,7 @@
 pt-Br:
+  search:
+    placeholder: digite o nome do candidato
+    btn: pesquisar
   menu:
     home: Início
     about: Sobre
@@ -7,8 +10,6 @@ pt-Br:
     index:
       heading_html: "Monitore as promessas<br> dos candidatos no Brasil"
       select_state: Selecione um estado
-      search-placeholder: digite o nome do candidato
-      search: pesquisar
   promises:
     waiting_approval: A promessa foi criada mas ela não irá aparecer até que um moderador aprove.
     status:

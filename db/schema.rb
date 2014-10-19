@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141019022818) do
+ActiveRecord::Schema.define(version: 20141019124932) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "unaccent"
 
   create_table "candidates", force: true do |t|
     t.string   "name"
@@ -69,6 +70,9 @@ ActiveRecord::Schema.define(version: 20141019022818) do
 
   add_index "promises", ["candidate_id"], name: "index_promises_on_candidate_id", using: :btree
   add_index "promises", ["category_id"], name: "index_promises_on_category_id", using: :btree
+
+  create_table "unnacents", force: true do |t|
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "",    null: false

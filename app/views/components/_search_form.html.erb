@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col-md-12 candidate-search">
+    <%= form_tag(candidates_path, :method => "get", id: "search-form") do %>
+      <div class="form-group">
+        <%= text_field_tag :search, params[:search],
+          placeholder: t('search.placeholder') %>
+      </div>
+      <%= submit_tag t('search.btn'), :name => nil,
+        class: 'btn btn-green text-uppercase' %>
+    <% end %>
+  </div>
+</div>

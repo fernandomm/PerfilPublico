@@ -13,6 +13,6 @@ class Candidate < ActiveRecord::Base
   end
 
   def self.search(search)
-    where("name ilike ?", "%#{search}%")
+    where("unaccent(name) ilike unaccent(?)", "%#{search}%")
   end
 end

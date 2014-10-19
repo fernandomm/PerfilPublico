@@ -6,8 +6,9 @@
 @import "base/variables";
 @import "components/btn-green";
 
+$photo-size: 150px;
+
 .candidate-header {
-	$photo-size: 150px;
 	background-color: $color-blue;
 	color: $color-white;
 
@@ -17,16 +18,6 @@
 		font-size: 20px;
 	}
 
-	.img {
-		@extend .img-circle;
-		@extend .pull-right;
-		width: $photo-size;
-		height: $photo-size;
-		border: 5px solid $color-white;
-		background-repeat: no-repeat;
-    background-position: center;
-		background-size: cover;
-	}
 	.add-candidate {
 		@extend .btn;
 		@extend .btn-green;
@@ -48,4 +39,21 @@
 	.bio {
 		margin-top: 20px;
 	}
+}
+
+.candidate-img {
+	@extend .img-circle;
+	@extend .pull-right;
+	width: $photo-size;
+	height: $photo-size;
+	border: 5px solid $color-white;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.candidate-list-img {
+	@extend .candidate-img;
+	width: $photo-size / 2;
+	height: $photo-size / 2;
 }
