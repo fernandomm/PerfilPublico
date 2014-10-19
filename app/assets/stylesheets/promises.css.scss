@@ -178,3 +178,48 @@
 		}
 	}
 }
+
+
+
+.top-promises-header{
+	background: $color-blue;
+	margin-bottom: 30px;
+	h3 {
+		font-weight: bold;
+		font-size: 25px;
+		line-height: 70px;
+		color: $color-white;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.top-promises-list {
+	.top-promise-title {
+		color: $color-dark;
+		font-size: 18px;
+		a {
+			color: #000;
+		}
+	}
+}
+.top-promise-box {
+
+}
+.top-promise-box:nth-child(odd) {
+	background: #ccc;
+}
+.candidate-context {
+	h3 {
+		font-size: 18px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0;
+		a {
+			color: $color-blue;
+		}
+	}
+	span {
+		font-weight: 400;
+	}
+}
