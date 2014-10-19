@@ -11,4 +11,8 @@ class Candidate < ActiveRecord::Base
   def political_office_enum
     ['mayor', 'city_councilman', 'state_representative', 'governor', 'congressman', 'senator', 'president']
   end
+
+  def self.search(search)
+    where("unaccent(name) ilike unaccent(?)", "%#{search}%")
+  end
 end

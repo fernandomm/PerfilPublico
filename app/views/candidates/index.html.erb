@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="page-header">
+      <h1><%= t('.search-results', search: params[:search]) %></h1>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-10 col-md-offset-1">
+    <ul class="media-list">
+      <% @candidates.each do |candidate| %>
+        <li class="media">
+        <a class="pull-left" href="#">
+          <div class="candidate-list-img"
+            style="background-image: url(<%= candidate.image.url %>)"></div>
+        </a>
+        <div class="media-body">
+          <h3 class="media-heading text-uppercase">
+            <%= link_to candidate.name, candidate_path(candidate.id) %>
+          </h3>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

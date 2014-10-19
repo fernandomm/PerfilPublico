@@ -1,4 +1,8 @@
 class CandidatesController < ApplicationController
+  def index
+    @candidates = Candidate.search(params[:search])
+  end
+
   def show
     @candidate = Candidate.find(params[:id])
     @most_voted = @candidate.promises.visible

@@ -1,4 +1,7 @@
 pt-Br:
+  search:
+    placeholder: digite o nome do candidato
+    btn: pesquisar
   menu:
     home: Início
     about: Sobre

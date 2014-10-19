@@ -24,6 +24,9 @@ en:
     home: Home
     about: About
     contact: Contact
+  search:
+    placeholder: type the candidate's name
+    btn: search
   main:
     index:
       heading_html: "Follow promises <br> of Brazilian candidates"
@@ -35,6 +38,8 @@ en:
       in_progress: In progress
       not_accomplished: Not accomplished
   candidates:
+    index:
+      search-results: Showing results for '%{search}'...
     show:
       add-promise: Add Promise
       promises:
