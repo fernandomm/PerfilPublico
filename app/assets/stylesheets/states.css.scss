@@ -1,0 +1,71 @@
+// Place all the styles related to the States controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "base/variables";
+@import "components/btn-green";
+
+$photo-size: 150px;
+
+.state-header {
+	background-color: $color-grey;
+}
+
+
+.state-img {
+	@extend .img-circle;
+	@extend .pull-right;
+	width: $photo-size;
+	height: $photo-size;
+	border: 5px solid $color-white;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	margin: 10px 0;
+	background-image: url(image_path('flag.jpg'));
+}
+
+.state-name {
+	line-height: 130px;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 60px;
+}
+
+
+.candidate-list {
+	h3 {
+		text-transform: uppercase;
+		margin-bottom: 20px;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			@include clearfix;
+			margin-bottom: 10px;
+			a {
+				text-transform: uppercase;
+				font-size: 20px;
+				font-weight: 300;
+				color: $color-grey;
+				line-height:  48px;
+				text-decoration: none;
+				.box-image {
+					height: 48px;
+					width: 48px;
+					background: url(image_path('flag.jpg')) center no-repeat;
+					background-size: 48px 48px;
+					float: left;
+					margin-right: 20px;
+				}
+				.name {
+					font-weight: bold;
+					color: $color-blue;
+				}
+			}
+		}
+	}
+}
