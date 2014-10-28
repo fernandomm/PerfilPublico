@@ -12,9 +12,9 @@ class PromisesController < ApplicationController
     @promise.visible = false
 
     if @promise.save
-      redirect_to @candidate, :notice => I18n.t('promises.waiting_approval')
+      redirect_to @candidate, :notice => I18n.t("promises.waiting_approval")
     else
-      render 'new'
+      render "new"
     end
   end
 
@@ -40,12 +40,12 @@ class PromisesController < ApplicationController
 
     if session.has_key?(@promise.id)
       redirect_to candidate_promise_path(@candidate, @promise),
-        :alert => I18n.t('promises.already_voted')
+        :alert => I18n.t("promises.already_voted")
     else
       @promise.increment!(type)
       register_vote_in_session
       redirect_to candidate_promise_path(@candidate, @promise),
-        :notice => I18n.t('promises.vote_registered')
+        :notice => I18n.t("promises.vote_registered")
     end
   end
 
