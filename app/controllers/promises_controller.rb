@@ -1,5 +1,5 @@
 class PromisesController < ApplicationController
-  before_action :authenticate_user!, :except => [:show]
+  before_action :authenticate_user!, except: [:show]
 
   def new
     @candidate = Candidate.find params[:candidate_id]
@@ -12,7 +12,7 @@ class PromisesController < ApplicationController
     @promise.visible = false
 
     if @promise.save
-      redirect_to @candidate, :notice => I18n.t("promises.waiting_approval")
+      redirect_to @candidate, notice: I18n.t("promises.waiting_approval")
     else
       render "new"
     end
