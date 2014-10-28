@@ -34,26 +34,26 @@ class PromisesController < ApplicationController
 
   private
 
-    def vote(type)
-      @candidate = Candidate.find params[:candidate_id]
-      @promise = @candidate.promises.find(params[:id])
+  def vote(type)
+    @candidate = Candidate.find params[:candidate_id]
+    @promise = @candidate.promises.find(params[:id])
 
-      if session.has_key?(@promise.id)
-        redirect_to candidate_promise_path(@candidate, @promise),
-          :alert => I18n.t('promises.already_voted')
-      else
-        @promise.increment!(type)
-        register_vote_in_session
-        redirect_to candidate_promise_path(@candidate, @promise),
-          :notice => I18n.t('promises.vote_registered')
-      end
+    if session.has_key?(@promise.id)
+      redirect_to candidate_promise_path(@candidate, @promise),
+        :alert => I18n.t('promises.already_voted')
+    else
+      @promise.increment!(type)
+      register_vote_in_session
+      redirect_to candidate_promise_path(@candidate, @promise),
+        :notice => I18n.t('promises.vote_registered')
     end
+  end
 
-    def promise_params
-      params.require(:promise).permit(:title, :description, :category_id, :date, :status)
-    end
+  def promise_params
+    params.require(:promise).permit(:title, :description, :category_id, :date, :status)
+  end
 
-    def register_vote_in_session
-      session[@promise.id] = true
-    end
+  def register_vote_in_session
+    session[@promise.id] = true
+  end
 end
