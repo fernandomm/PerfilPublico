@@ -1,4 +1,4 @@
-Perfilpublico [ ![Codeship Status for railsrumble/r14-team-83](https://www.codeship.io/projects/3a2dc240-389f-0132-c37b-6a023c1e0863/status)](https://www.codeship.io/projects/42075) [![Stories in Ready](https://badge.waffle.io/railsrumble/r14-team-83.png?label=ready&title=Ready)](https://waffle.io/railsrumble/r14-team-83)
+Perfilpublico [ ![Codeship Status for PerfilPublico/PerfilPublico](https://codeship.io/projects/4c5968c0-4067-0132-2454-56a82d25c0eb/status)](https://codeship.io/projects/43868) [![Code Climate](https://codeclimate.com/github/PerfilPublico/PerfilPublico/badges/gpa.svg)](https://codeclimate.com/github/PerfilPublico/PerfilPublico) [![Code Climate](https://codeclimate.com/github/PerfilPublico/PerfilPublico/badges/gpa.svg)](https://codeclimate.com/github/PerfilPublico/PerfilPublico) [![Coverage Status](https://coveralls.io/repos/PerfilPublico/PerfilPublico/badge.png)](https://coveralls.io/r/PerfilPublico/PerfilPublico) [![Stories in Ready](https://badge.waffle.io/PerfilPublico/PerfilPublico.png?label=ready&title=Ready)](https://waffle.io/PerfilPublico/PerfilPublico)
 ================
 
 PerfilPublico is a website that focus on giving an overall look about what politicians proposed and what they actually did when they got elected.
@@ -31,4 +31,4 @@ rails s
 Credits
 -------
 
-See [contributors](https://github.com/railsrumble/r14-team-83).
+See [contributors](https://github.com/PerfilPublico/PerfilPublico/graphs/contributors).
