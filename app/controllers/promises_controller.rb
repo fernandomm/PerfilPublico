@@ -50,8 +50,8 @@ class PromisesController < ApplicationController
   end
 
   def promise_params
-    params.require(:promise)
-      .permit(:title, :description, :category_id, :date, :status)
+    params.require(:promise).
+      permit(:title, :description, :category_id, :date, :status)
   end
 
   def register_vote_in_session
