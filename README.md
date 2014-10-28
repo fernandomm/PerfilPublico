@@ -1,4 +1,4 @@
-Perfilpublico [ ![Codeship Status for PerfilPublico/PerfilPublico](https://codeship.io/projects/4c5968c0-4067-0132-2454-56a82d25c0eb/status)](https://codeship.io/projects/43868) [![Stories in Ready](https://badge.waffle.io/PerfilPublico/PerfilPublico.png?label=ready&title=Ready)](https://waffle.io/PerfilPublico/PerfilPublico)
+Perfilpublico [ ![Codeship Status for PerfilPublico/PerfilPublico](https://codeship.io/projects/4c5968c0-4067-0132-2454-56a82d25c0eb/status)](https://codeship.io/projects/43868) [![Code Climate](https://codeclimate.com/github/PerfilPublico/PerfilPublico/badges/gpa.svg)](https://codeclimate.com/github/PerfilPublico/PerfilPublico) [![Code Climate](https://codeclimate.com/github/PerfilPublico/PerfilPublico/badges/gpa.svg)](https://codeclimate.com/github/PerfilPublico/PerfilPublico) [![Stories in Ready](https://badge.waffle.io/PerfilPublico/PerfilPublico.png?label=ready&title=Ready)](https://waffle.io/PerfilPublico/PerfilPublico)
 ================
 
 PerfilPublico is a website that focus on giving an overall look about what politicians proposed and what they actually did when they got elected.
