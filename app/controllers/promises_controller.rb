@@ -40,17 +40,18 @@ class PromisesController < ApplicationController
 
     if session.has_key?(@promise.id)
       redirect_to candidate_promise_path(@candidate, @promise),
-        :alert => I18n.t("promises.already_voted")
+                  alert: I18n.t("promises.already_voted")
     else
       @promise.increment!(type)
       register_vote_in_session
       redirect_to candidate_promise_path(@candidate, @promise),
-        :notice => I18n.t("promises.vote_registered")
+                  notice: I18n.t("promises.vote_registered")
     end
   end
 
   def promise_params
-    params.require(:promise).permit(:title, :description, :category_id, :date, :status)
+    params.require(:promise)
+      .permit(:title, :description, :category_id, :date, :status)
   end
 
   def register_vote_in_session
