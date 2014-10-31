@@ -1,5 +1,4 @@
 class Candidate < ActiveRecord::Base
-  self.per_page = 10
   belongs_to :political_party
   has_many :promises
 

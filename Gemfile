@@ -19,7 +19,6 @@ gem 'rails_admin'
 gem 'rails-i18n', '~> 4.0.0'
 gem 'unicorn'
 gem 'nprogress-rails'
-gem 'will_paginate'
 gem 'coveralls', require: false
 group :development do
   gem 'better_errors'
